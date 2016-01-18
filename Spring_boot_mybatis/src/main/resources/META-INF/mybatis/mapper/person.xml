@@ -1,0 +1,63 @@
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.example.dto.mapper.PersonMapper">
+	
+	<select id="selectList" resultType="Person">
+		SELECT
+		idx AS idx,
+		name AS name,
+		address AS address,
+		age AS age
+		FROM example.person
+	</select>
+
+	<select id="selectOne" resultType="Person" parameterType="Long">
+		SELECT
+		idx AS idx,
+		name AS name,
+		address AS address,
+		age AS age
+		FROM example.person
+		WHERE example.person.id = #{value}
+	</select>
+
+	<select id="selectByUserName" resultType="Person">
+		SELECT
+		idx AS idx,
+		name AS name,
+		address AS address,
+		age AS age
+		FROM example.person
+		WHERE example.person.name = #{name}
+	</select>
+
+	<insert id="insert" parameterType="com.example.dto.Person">
+		INSERT INTO example.person (
+		idx,
+		name,
+		address,
+		age
+		)
+		VALUES (
+		#{idx},
+		#{name},
+		#{address},
+		#{age}
+		)
+	</insert>
+
+	<update id="update" parameterType="com.example.dto.Person">
+		UPDATE example.person SET
+		name
+		= #{name},
+		address = #{address},
+		age = #{age}
+		WHERE example.person.id =
+		#{id}
+	</update>
+
+	<delete id="delete" parameterType="com.example.dto.Person">
+		DELETE FROM example.person
+		WHERE example.person.idx = #{idx}
+	</delete>
+	
+</mapper>

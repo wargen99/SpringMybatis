@@ -1,0 +1,44 @@
+2016:01:22 11:12:51.768 INFO  --- [main]
+				c.e.SpringBootMybatisApplicationTests : Starting SpringBootMybatisApplicationTests on Kei-Desktop with PID 10800 (C:\Users\Kei\git\Spring_boot_mybatis\Spring_boot_mybatis\target\test-classes started by Kei in C:\Users\Kei\git\Spring_boot_mybatis\Spring_boot_mybatis) 
+2016:01:22 11:12:51.773 INFO  --- [main]
+				c.e.SpringBootMybatisApplicationTests : No active profile set, falling back to default profiles: default 
+2016:01:22 11:12:51.873 INFO  --- [main]
+				o.s.w.c.s.GenericWebApplicationContext : Refreshing org.springframework.web.context.support.GenericWebApplicationContext@3cdf2c61: startup date [Fri Jan 22 11:12:51 KST 2016]; root of context hierarchy 
+2016:01:22 11:12:52.448 INFO  --- [main]
+				o.s.b.f.s.DefaultListableBeanFactory : Overriding bean definition for bean 'beanNameViewResolver' with a different definition: replacing [Root bean: class [null]; scope=; abstract=false; lazyInit=false; autowireMode=3; dependencyCheck=0; autowireCandidate=true; primary=false; factoryBeanName=org.springframework.boot.autoconfigure.web.ErrorMvcAutoConfiguration$WhitelabelErrorViewConfiguration; factoryMethodName=beanNameViewResolver; initMethodName=null; destroyMethodName=(inferred); defined in class path resource [org/springframework/boot/autoconfigure/web/ErrorMvcAutoConfiguration$WhitelabelErrorViewConfiguration.class]] with [Root bean: class [null]; scope=; abstract=false; lazyInit=false; autowireMode=3; dependencyCheck=0; autowireCandidate=true; primary=false; factoryBeanName=org.springframework.boot.autoconfigure.web.WebMvcAutoConfiguration$WebMvcAutoConfigurationAdapter; factoryMethodName=beanNameViewResolver; initMethodName=null; destroyMethodName=(inferred); defined in class path resource [org/springframework/boot/autoconfigure/web/WebMvcAutoConfiguration$WebMvcAutoConfigurationAdapter.class]] 
+2016:01:22 11:12:52.798 INFO  --- [main]
+				o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker : Bean 'datasource.mybatis.CONFIGURATION_PROPERTIES' of type [class com.example.config.MyBatisProperties] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying) 
+2016:01:22 11:12:52.802 INFO  --- [main]
+				o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker : Bean 'myBatisDatabaseConfig' of type [class com.example.config.MyBatisDatabaseConfig$$EnhancerBySpringCGLIB$$431401d4] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying) 
+2016:01:22 11:12:52.831 INFO  --- [main]
+				o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker : Bean 'dataSource' of type [class org.apache.tomcat.jdbc.pool.DataSource] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying) 
+2016:01:22 11:12:53.039 INFO  --- [main]
+				o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker : Bean 'mybatisSqlSessionFactory' of type [class org.apache.ibatis.session.defaults.DefaultSqlSessionFactory] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying) 
+2016:01:22 11:12:53.044 INFO  --- [main]
+				o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker : Bean 'personMapper' of type [class org.mybatis.spring.mapper.MapperFactoryBean] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying) 
+2016:01:22 11:12:53.046 INFO  --- [main]
+				o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker : Bean 'org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration' of type [class org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration$$EnhancerBySpringCGLIB$$88ad5e5a] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying) 
+2016:01:22 11:12:53.708 INFO  --- [main]
+				o.s.w.s.m.m.a.RequestMappingHandlerAdapter : Looking for @ControllerAdvice: org.springframework.web.context.support.GenericWebApplicationContext@3cdf2c61: startup date [Fri Jan 22 11:12:51 KST 2016]; root of context hierarchy 
+2016:01:22 11:12:53.767 INFO  --- [main]
+				o.s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/user/{user}]}" onto public java.lang.String com.example.HomeController.getUserInfo(java.lang.String) 
+2016:01:22 11:12:53.770 INFO  --- [main]
+				o.s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/error]}" onto public org.springframework.http.ResponseEntity<java.util.Map<java.lang.String, java.lang.Object>> org.springframework.boot.autoconfigure.web.BasicErrorController.error(javax.servlet.http.HttpServletRequest) 
+2016:01:22 11:12:53.770 INFO  --- [main]
+				o.s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/error],produces=[text/html]}" onto public org.springframework.web.servlet.ModelAndView org.springframework.boot.autoconfigure.web.BasicErrorController.errorHtml(javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse) 
+2016:01:22 11:12:53.805 INFO  --- [main]
+				o.s.w.s.h.SimpleUrlHandlerMapping : Mapped URL path [/webjars/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler] 
+2016:01:22 11:12:53.805 INFO  --- [main]
+				o.s.w.s.h.SimpleUrlHandlerMapping : Mapped URL path [/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler] 
+2016:01:22 11:12:53.846 INFO  --- [main]
+				o.s.w.s.h.SimpleUrlHandlerMapping : Mapped URL path [/**/favicon.ico] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler] 
+2016:01:22 11:12:54.018 INFO  --- [main]
+				c.e.SpringBootMybatisApplicationTests : Started SpringBootMybatisApplicationTests in 2.613 seconds (JVM running for 4.303) 
+2016:01:22 11:12:58.848 WARN  --- [main]
+				o.a.tomcat.jdbc.pool.ConnectionPool : initialSize is larger than maxActive, setting initialSize to: 5 
+2016:01:22 11:13:00.889 INFO  --- [main]
+				o.s.b.f.xml.XmlBeanDefinitionReader : Loading XML bean definitions from class path resource [org/springframework/jdbc/support/sql-error-codes.xml] 
+2016:01:22 11:13:00.926 INFO  --- [main]
+				o.s.j.support.SQLErrorCodesFactory : SQLErrorCodes loaded: [DB2, Derby, H2, HSQL, Informix, MS-SQL, MySQL, Oracle, PostgreSQL, Sybase, Hana] 
+2016:01:22 11:13:00.966 INFO  --- [Thread-1]
+				o.s.w.c.s.GenericWebApplicationContext : Closing org.springframework.web.context.support.GenericWebApplicationContext@3cdf2c61: startup date [Fri Jan 22 11:12:51 KST 2016]; root of context hierarchy 

@@ -9,7 +9,7 @@ import org.springframework.context.annotation.ComponentScan;
 
 @SpringBootApplication
 @EnableAutoConfiguration(exclude = { DataSourceTransactionManagerAutoConfiguration.class, DataSourceAutoConfiguration.class })
-@ComponentScan(basePackages = {"com.example.config", "com.example", "com.example.service"})
+@ComponentScan(basePackages = {"com.example.config", "com.example", "com.example.service", "com.example.dto"})
 public class SpringBootMybatisApplication {
 
 	public static void main(String[] args) {

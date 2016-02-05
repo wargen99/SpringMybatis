@@ -14,7 +14,9 @@ import org.hamcrest.core.Is;
 
 import com.example.dto.Person;
 import com.example.dto.mapper.PersonMapper;
+import com.example.mysql.dto.Project;
 import com.example.service.PersonService;
+import com.example.service.ProjectService;
 
 @RunWith(SpringJUnit4ClassRunner.class)
 @SpringApplicationConfiguration(classes = SpringBootMybatisApplication.class)
@@ -26,6 +28,9 @@ public class SpringBootMybatisApplicationTests {
 	
 	@Autowired
 	private PersonService personService;
+	
+	@Autowired
+	private ProjectService projectService;
 	
 	/*@Test
 	public void mybatisTest() {
@@ -45,19 +50,19 @@ public class SpringBootMybatisApplicationTests {
 	}*/
 	
 	@Test
-	public void mybatisRollbackTest()
+	public void doubleDbTest()
 	{
 		ArrayList<Person> personArray = new ArrayList<Person>();
 		Person person = new Person();
 		person.setId(1);
 		person.setAge(10);
 		person.setAddress("seoul my home");
-		person.setName("wargen");
+		person.setName("test");
 		
 		personArray.add(person);
 		
 		Person person2 = new Person();
-		person2.setId(1);
+		person2.setId(2);
 		person2.setAge(10);
 		person2.setAddress("seoul my home");
 		person2.setName("wargen");
@@ -66,6 +71,22 @@ public class SpringBootMybatisApplicationTests {
 		
 		
 		personService.setPersonList((List<Person>)personArray);
+		
+		
+		ArrayList<Project> projectList = new ArrayList<Project>();
+		Project project = new Project();
+		project.setProjectName("bigcompany");
+		project.setProjectDescription("so big");
+		
+		projectList.add(project);
+		
+		Project project2 = new Project();
+		project2.setProjectName("smallcompany");
+		project2.setProjectDescription("so small");
+		
+		projectList.add(project2);
+		
+		projectService.setPersonList((List<Project>)projectList);
 	}
 
 }

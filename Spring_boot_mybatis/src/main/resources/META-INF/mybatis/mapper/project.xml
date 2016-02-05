@@ -1,0 +1,55 @@
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.example.mysql.dto.mapper.ProjectMapper">
+	
+	<select id="selectList" resultType="com.example.mysql.dto.Project">
+		SELECT
+		idx AS idx,
+		projectName AS projectName,
+		projectDescription AS projectDescription
+		FROM example.project_info
+	</select>
+
+	<select id="selectOne" resultType="com.example.mysql.dto.Project" parameterType="int">
+		SELECT
+		idx AS idx,
+		projectName AS projectName,
+		projectDescription AS projectDescription
+		FROM example.project_info
+		WHERE example.project_info.idx = #{value}
+	</select>
+
+	<select id="selectByProjectName" resultType="com.example.mysql.dto.Project">
+		SELECT
+		idx AS idx,
+		projectName AS projectName,
+		projectDescription AS projectDescription
+		FROM example.project_info
+		WHERE example.project_info.projectName = #{projectName}
+	</select>
+
+	<insert id="insert" parameterType="com.example.mysql.dto.Project">
+		INSERT INTO example.project_info (
+		projectDescription,
+		projectName
+		)
+		VALUES (
+		#{projectDescription},
+		#{projectName}
+		)
+	</insert>
+
+	<update id="update" parameterType="com.example.mysql.dto.Project">
+		UPDATE example.project_info SET
+		projectName
+		= #{projectName},
+		projectDescription = #{projectDescription}
+		WHERE example.project_info.idx =
+		#{idx}
+	</update>
+
+	<delete id="delete" parameterType="com.example.mysql.dto.Project">
+		DELETE FROM example.project_info
+		WHERE example.project_info.idx = #{idx}
+	</delete>
+	
+</mapper>

@@ -3,9 +3,12 @@ package com.example.dto.mapper;
 import java.util.List;
 
 import org.apache.ibatis.annotations.Param;
+import org.springframework.stereotype.Component;
 
+import com.example.dto.FirstDatabase;
 import com.example.dto.Person;
 
+@FirstDatabase
 public interface PersonMapper {
 
 	public List<Person> selectList();
